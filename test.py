@@ -2,7 +2,7 @@ from unittest.mock import Mock, patch
 
 from nose.tools import assert_is_none, assert_dict_equal
 
-from app import get_data
+from app.app import get_data
 
 
 valid_response = {'q': 'chicken',
@@ -16,7 +16,7 @@ valid_response = {'q': 'chicken',
                   }
 
 
-@patch('app.requests.get')
+@patch('app.app.requests.get')
 def test_get_data_with_valid_key(mock_get):
 
     mock_get.return_value = Mock(status_code=200)
@@ -27,8 +27,8 @@ def test_get_data_with_valid_key(mock_get):
     assert_dict_equal(response, valid_response)
 
 
-@patch('app.requests.get')
-def test_get_response_with_invalid_key(mock_get):
+@patch('app.app.requests.get')
+def test_get_data_with_invalid_key(mock_get):
 
     mock_get.return_value = Mock(status_code=401)
 

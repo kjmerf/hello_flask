@@ -54,4 +54,5 @@ def my_form_post():
     return render_template('results.html', posts=recipes)
 
 
-app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
