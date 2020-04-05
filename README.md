@@ -1,5 +1,5 @@
 # hello flask
-The application searches for recipes using the edamam API: https://developer.edamam.com/edamam-recipe-api.
+This application searches for recipes using the edamam API: https://developer.edamam.com/edamam-recipe-api.
 
 I made it to test docker and flask.
 
