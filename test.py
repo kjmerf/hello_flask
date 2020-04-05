@@ -5,15 +5,17 @@ from nose.tools import assert_is_none, assert_dict_equal
 from app.app import get_data
 
 
-valid_response = {'q': 'chicken',
-                  'hits': [
-                      {'recipe':
-                          {'label': 'http://www.edamam.com/recipe_123',
-                           'source': 'Blog',
-                           'url': 'http://www.blog.com/recipes/chicken.html',
-                           'image': 'https://www.edamam.com/web-img/123.jpg'}}
-                      ]
-                  }
+valid_response = {
+  'q': 'chicken',
+  'hits': [{
+    'recipe': {
+      'label': 'http://www.edamam.com/recipe_123',
+      'source': 'Blog',
+      'url': 'http://www.blog.com/recipes/chicken.html',
+      'image': 'https://www.edamam.com/web-img/123.jpg'
+    }
+  }]
+}
 
 
 @patch('app.app.requests.get')
