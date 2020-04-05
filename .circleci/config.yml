@@ -1,0 +1,22 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  lint-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/install-deps
+      - run:
+          command: flake8 --max-line-length=160
+          name: Lint
+      - run:
+          command: nosetests --verbosity=2 --nologcapture test.py
+          name: Test
+
+workflows:
+  main:
+    jobs:
+      - lint-and-test

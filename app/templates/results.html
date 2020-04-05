@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RecipeFinder</title>
+  </head>
+  <body>
+    {% for x in posts%}
+      <h1>{{x.label}}</h1>
+      <p>By: {{x.source}}</p>
+      <p><a href={{x.url}}>Read about it here!</a></p>
+      <img src={{x.image}} alt="Trulli" width="500" height="333">
+    {% endfor %}
+  </body>
+</html>
