@@ -1,7 +1,7 @@
 # hello flask
 This application searches for recipes using the edamam API: https://developer.edamam.com/edamam-recipe-api.
 
-I made it to test docker and flask.
+I made it to learn docker and flask.
 
 To run locally, you need an app ID and app key from edamam.
 Then store your id and key in environment variables called ```EDAMAM_APP_ID``` and ```EDAMAM_APP_KEY``` respectively.
