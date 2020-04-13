@@ -1,0 +1,9 @@
+version: '3'
+services:
+  rabbit:
+    build: .
+    ports:
+      - '5000:5000'
+    environment:
+      - EDAMAM_APP_ID
+      - EDAMAM_APP_KEY
